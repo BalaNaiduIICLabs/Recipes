@@ -1,0 +1,17 @@
+<div *ngIf="recipe()">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ recipe().idCategory }}</mat-card-title>
+      <mat-card-subtitle>{{ recipe().strCategory }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img [src]="recipe().strCategoryThumb" [alt]="recipe().strCategory" />
+
+    <mat-card-content>
+      <p><strong>Category:</strong> {{ recipe().strCategory }}</p>
+      <p><strong>Area:</strong> {{ recipe().strArea }}</p>
+      <p><strong>Instructions:</strong> {{ recipe().strCategoryDescription }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

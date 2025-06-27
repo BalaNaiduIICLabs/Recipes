@@ -1,0 +1,30 @@
+.container{
+    margin-top: 2%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 35px;
+}
+button{
+    align-self: center;
+    margin-right: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+mat-expansion-panel-header{
+    min-height:fit-content;
+    background-color: aliceblue;
+}
+mat-panel-title, mat-panel-description{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 30vh;
+    color: maroon;
+    font-size: x-large;
+}
+.newButton{
+    margin-left: 30px;
+    margin-top: 5px;
+    width : 120px;
+}

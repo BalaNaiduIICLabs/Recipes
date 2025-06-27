@@ -1,0 +1,29 @@
+mat-card{
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 350px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    background-color:aliceblue;
+}
+
+mat-card-title{
+    font-size: x-larger;
+    font-weight: 350;
+    color: maroon;
+}
+
+mat-card-subtitle{
+    font-size: small;
+    font-weight: 200;
+}
+
+.example-card {
+  max-width: 50%;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

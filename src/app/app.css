@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+span, button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.live{
+    background-color: crimson;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

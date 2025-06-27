@@ -1,0 +1,48 @@
+<div class="container">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Search Recipes Here</mat-label>
+      <input matInput [formControl]="searchControl" placeholder="Dish name" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <button class="newButton" matFab (click)="deleteLocalStorage()">
+      <h3>.deleteFavs</h3>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      *ngFor="let dish of dishList(); trackBy: trackByCategory"
+      style="margin-bottom: 5px"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ dish.strCategory }}</mat-panel-title>
+        <mat-panel-description>{{ dish.idCategory }}</mat-panel-description>
+
+        <mat-slide-toggle
+          [ngModel]="dish.favorite"
+          (ngModelChange)="onToggleFavorite(dish, $event)"
+        ></mat-slide-toggle>
+
+        <button mat-button [routerLink]="['/recipePage', dish.idCategory]">
+          .openRecipeApp
+        </button>
+      </mat-expansion-panel-header>
+
+      <img
+        [src]="dish.strCategoryThumb"
+        [alt]="dish.strCategory"
+        style="align-items: center; width: 30vw; margin-left: 30%"
+      />
+      <p><strong>Description:</strong> {{ dish.strCategoryDescription }}.</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div
+    *ngIf="dishList().length === 0"
+    style="text-align: center; margin-top: 20px"
+  >
+    <h1>.noResultsFoundForYourSearch...!</h1>
+  </div>
+</div>

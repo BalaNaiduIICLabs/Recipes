@@ -1,0 +1,31 @@
+<div class="card-container">
+  <div class="card-row" *ngFor="let idx of [].constructor(dishList.length / 2); let i = index">
+    <mat-card *ngIf="dishList[i * 2]" class="example-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ dishList[i * 2].idCategory }}</mat-card-title>
+        <mat-card-subtitle>{{ dishList[i * 2].strCategory }}</mat-card-subtitle>
+      </mat-card-header>
+      <img [src]="dishList[i * 2].strCategoryThumb" [alt]="dishList[i * 2].strCategory" />
+      <mat-card-content>
+        <p><strong>Category:</strong> {{ dishList[i * 2].strCategory }}</p>
+        <p><strong>Area:</strong> {{ dishList[i * 2].strCategory }}</p>
+        <p><strong>Instructions:</strong> {{ dishList[i * 2].strCategoryDescription }}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="dishList[i * 2 + 1]" class="example-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ dishList[i * 2 + 1].idCategory }}</mat-card-title>
+        <mat-card-subtitle>{{ dishList[i * 2 + 1].strCategory }}</mat-card-subtitle>
+      </mat-card-header>
+      <img [src]="dishList[i * 2 + 1].strCategoryThumb" [alt]="dishList[i * 2 + 1].strCategory" />
+      <mat-card-content>
+        <p><strong>Category:</strong> {{ dishList[i * 2 + 1].strCategory }}</p>
+        <p><strong>Area:</strong> {{ dishList[i * 2 + 1].strCategory }}</p>
+        <p><strong>Instructions:</strong> {{ dishList[i * 2 + 1].strCategoryDescription }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

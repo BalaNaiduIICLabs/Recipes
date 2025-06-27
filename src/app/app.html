@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" style="background-color: aliceblue;">
+  <span style="color: crimson; font-weight: 100;">{{ title }}</span>
+  <span class="spacer"></span>
+  <button mat-button routerLinkActive="live" routerLink="favorite">.Favorite</button>
+  <button mat-button routerLinkActive="live" [routerLinkActiveOptions]="{exact:true}" routerLink="/">.Home</button>
+  <button mat-button routerLinkActive="live" routerLink="menu">.Menu</button>
+  <button mat-button routerLinkActive="live" routerLink="contact">.Random</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
